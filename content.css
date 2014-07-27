@@ -1,0 +1,17 @@
+#extension_content {
+    border-radius: 4px;
+    border: 1px solid #ADEDED;
+    background-color: #EDEDED;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1000;
+    right: 0;
+}
+
+#download {
+    cursor: pointer;
+    position: absolute;
+    left: 272px;
+    top: 186px
+}

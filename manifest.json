@@ -1,0 +1,30 @@
+{
+    "name":"douban.fm.download",
+    "version":"1.0",
+    "manifest_version":2,
+    "description":"An extension download music on douban.fm",
+    "browser_action":{
+        "default_icon":"icon.jpg"
+    },
+
+    "permissions": ["tabs","webRequest", "webRequestBlocking", "contextMenus",
+         "http://*/*"],
+
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "icons":{
+        "16":"icon.jpg",
+        "48":"icon.jpg",
+        "128":"icon.jpg"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://douban.fm/*","http://fm.douban.com/*"],
+            "css":["content.css"],
+            "js": [ "jquery.min.js","content.js"],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": ["download_30x30.png"]
+}
